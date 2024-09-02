@@ -64,6 +64,7 @@ p {
   overflow: hidden;
   background-color: #e2e2d2;
   padding-bottom: 2rem;
+  width: 100%;
         }
 
 .hero-content {
