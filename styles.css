@@ -1,3 +1,60 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NewAmsterdam';
+  src: url('/fonts/NewAmsterdam-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --pink: #c51f5d;
+  --beige: #e2e2d2;
+  --blue: #243447;
+  --black: #141d26;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NewAmsterdam', serif;
+}
+
+.hero-trapezoid {
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ width: 55%;
+ background-color: #c51f5d;
+ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.hero-title {
+ font-family: 'NewAmsterdam-Regular', sans-serif;
+ color: #141d26;
+ font-size: 3rem;
+ font-weight: bold;
+ margin-bottom: 1rem;
+        }
+        
+.hero-description {
+  color: #243447;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  }
+
 .logo {
   width: auto;
   height: auto;
@@ -16,5 +73,16 @@
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
-  width: auto;
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  background-color: #a51a4d; /* Darker shade of pink for hover state */
 }
