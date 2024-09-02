@@ -63,11 +63,15 @@ p {
 }
 }
 
-.hero-section {
+.section {
   position: relative;
   overflow: hidden;
   padding-bottom: 2rem;
         }
+
+.padding-top {
+  padding-top:7rem;
+}
 
 .content {
   padding-left: 2rem;
@@ -85,9 +89,22 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 3.5rem;
- color: #141d26;
+ color: var(--black);
  font-weight: normal;
- padding-top:7rem;
+ margin-bottom: 1.5rem;
+ width:100%;
+        }
+
+.hero-title-blue-beige {
+  background-color: var(--blue);
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+ color: var(--beige);
+ font-weight: normal;
+ padding-left: 2rem;
+ padding-top:3rem;
  margin-bottom: 1.5rem;
  width:100%;
         }
