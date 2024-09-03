@@ -84,6 +84,17 @@ p {
   margin-bottom: 1.5rem;
         }
 
+.workshop-heading .highlight-pink {
+    background-color: var(--pink); /* Pink background color */
+    padding: 0 5px; /* Add some padding to create space around the text */
+    display: inline-block;
+}
+
+.workshop-heading .highlight-blue {
+    background-color: var(--blue); /* Pink background color */
+    padding: 0 5px; /* Add some padding to create space around the text */
+    display: inline-block;
+}
 .hero-title {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -97,6 +108,20 @@ p {
 
 .hero-title-blue-beige {
   background-color: var(--blue);
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+ color: var(--beige);
+ font-weight: normal;
+ padding-left: 2rem;
+ padding-top:3rem;
+ margin-bottom: 1.5rem;
+ width:100%;
+        }
+
+ .hero-title-pink-black {
+  background-color: var(--pink);
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -158,6 +183,20 @@ p {
   }
 }
 
+.custom-bullet-list {
+    list-style-type: circle; /* Changes the bullet to a circle */
+    color: var(--beige); /* Text color */
+    padding-left: 20px; /* Adds space to the left */
+}
+
+.custom-bullet-list li {
+    margin-bottom: 10px; /* Adds space between each list item */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
 .cta-button {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -179,6 +218,29 @@ padding: 10px 20px;
 
 .cta-button:hover {
   background-color: #a51a4d; /* Darker shade of pink for hover state */
+}
+
+.cta-button-blue {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-left: 10%
+  display: inline-block;
+padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  width: fit-content;
+  white-space: nowrap;
+  color: var(--beige);
+}
+
+.cta-button-blue:hover {
+  background-color: #24343b; /* Darker shade of pink for hover state */
 }
 
 .waves {
