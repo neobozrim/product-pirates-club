@@ -181,6 +181,10 @@ padding: 10px 20px;
   background-color: #a51a4d; /* Darker shade of pink for hover state */
 }
 
+.waves {
+  width: 100%;
+}
+
 .workshop-image {
   width: 60%;
   height: auto;
