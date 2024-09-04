@@ -28,6 +28,11 @@
   --black: #141d26;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: var(--black);
@@ -37,6 +42,7 @@ body {
 
 #header {
     position: fixed;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
@@ -63,14 +69,43 @@ p {
 }
 }
 
+.image {
+  display: block;            /* Makes the image a block element */
+  margin-left: auto;         /* Automatically sets the left margin */
+  margin-right: auto;        /* Automatically sets the right margin */
+  max-width: 200px;           /* Restricts the width of the image to the container */
+  width: 100%;              /* Sets a specific width, adjust to your needs */
+  height: auto;              /* Ensures the image scales correctly (keeps aspect ratio) */
+}
+
 .section {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 2rem;
+  width: 100%;                /* Restricts container width */
+  display: flex;             /* Applies Flexbox */
+  flex-direction: column;    /* Keeps the column layout */
+  justify-content: center;   /* Centers content vertically */
+  align-items: center;       /* Centers content horizontally */
         }
 
-.padding-top {
+
+.padding-top-two {
+  padding-top:2rem;
+}
+.padding-top-three {
+  padding-top:3rem;
+}
+.padding-top-seven {
   padding-top:7rem;
+}
+.padding-bottom-one {
+  padding-bottom:1rem;
+}
+
+.padding-bottom-two {
+  padding-bottom:2rem;
+}
+
+.padding-bottom-five {
+  padding-bottom:5rem;
 }
 
 .content {
@@ -78,11 +113,17 @@ p {
   position: relative;
   z-index: 2;
   height: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1.5rem;
         }
+.pirate-heading {
+    width: 80%;                /* Restricts the width of the text block to 80% */
+  margin: 0 auto;            /* Centers the text block horizontally */
+  text-align: center;
+}
+
 
 .workshop-heading .highlight-pink {
     background-color: var(--pink); /* Pink background color */
@@ -114,9 +155,6 @@ p {
   font-size: 3.5rem;
  color: var(--beige);
  font-weight: normal;
- padding-left: 2rem;
- padding-top:3rem;
- margin-bottom: 1.5rem;
  width:100%;
         }
 
@@ -128,9 +166,6 @@ p {
   font-size: 3.5rem;
  color: var(--beige);
  font-weight: normal;
- padding-left: 2rem;
- padding-top:3rem;
- margin-bottom: 1.5rem;
  width:100%;
         }
 
@@ -140,7 +175,6 @@ p {
   font-style: normal;
   color: #243447;
   font-size: 1.25rem;
-  wight:100%;
   }
 
 
@@ -171,7 +205,7 @@ p {
   margin-left: 2rem;
   width: auto;
   height: auto;
-  max-width: 18rem;
+  max-width: 16rem;
   max-height: 40px;
   object-fit: contain;
 }
@@ -184,7 +218,7 @@ p {
 }
 
 .custom-bullet-list {
-    list-style-type: circle; /* Changes the bullet to a circle */
+    list-style-type: disc; /* Changes the bullet to a circle */
     color: var(--beige); /* Text color */
     padding-left: 20px; /* Adds space to the left */
 }
@@ -202,10 +236,9 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
-  margin-top: 2rem;
   margin-left: 10%
   display: inline-block;
-padding: 10px 20px;
+  padding: 10px 20px;
   background-color: var(--pink);
   color: white;
   border: none;
@@ -225,10 +258,9 @@ padding: 10px 20px;
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
-  margin-top: 2rem;
   margin-left: 10%
   display: inline-block;
-padding: 10px 20px;
+  padding: 10px 20px;
   background-color: var(--blue);
   color: white;
   border: none;
