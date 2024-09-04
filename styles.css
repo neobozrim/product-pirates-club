@@ -221,6 +221,7 @@ p {
     list-style-type: disc; /* Changes the bullet to a circle */
     color: var(--beige); /* Text color */
     padding-left: 20px; /* Adds space to the left */
+    width: 80%;
 }
 
 .custom-bullet-list li {
@@ -286,5 +287,5 @@ p {
 }
 
 .workshop-title {
-
+  width: 90%;
 }

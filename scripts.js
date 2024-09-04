@@ -19,3 +19,17 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = scrollTop;
 });
+
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the button by its ID
+  const scrollButton = document.getElementById('scroll-button');
+  
+  // Add click event listener
+  scrollButton.addEventListener('click', function() {
+    // Scroll to the target section smoothly
+    document.getElementById('target-section').scrollIntoView({
+      behavior: 'smooth'  // Enables smooth scrolling
+    });
+  });
+});
