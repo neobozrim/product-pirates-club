@@ -21,11 +21,19 @@
   font-style: normal;
 }
 /* --------- end of fonts -------------- */
+
+
 :root {
   --pink: #c51f5d;
   --beige: #e2e2d2;
   --blue: #243447;
   --black: #141d26;
+  --spacing-unit: 1rem;
+  --section-padding: calc(var(--spacing-unit) * 2);
+  --content-padding: var(--spacing-unit);
+  --hero-top-padding: calc(var(--spacing-unit) * 7);
+}
+
 }
 
 html, body {
@@ -78,14 +86,28 @@ p {
   height: auto;              /* Ensures the image scales correctly (keeps aspect ratio) */
 }
 
-.section {
-  width: 100%;                /* Restricts container width */
-  display: flex;             /* Applies Flexbox */
-  flex-direction: column;    /* Keeps the column layout */
-  justify-content: center;   /* Centers content vertically */
-  align-items: center;       /* Centers content horizontally */
-        }
+.txt-black {
+  color: var(--black);
+}
+.txt-blue {
+  color: var(--blue);
+}
+.txt-pink {
+  color: var(--blue);
+}
+.txt-beige {
+  color: var(--beige);
+}
 
+.bg-black {
+  background-color: var(--black);
+}
+.bg-beige {
+  background-color: var(--beige);
+}
+.bg-pink {
+  background-color: var(--pink);
+}
 
 .padding-top-two {
   padding-top:2rem;
@@ -111,13 +133,23 @@ p {
 .hero-section {
     position: relative;
     overflow: hidden;
+    padding: var(--section-padding) 0;
 }
 
+.section {
+  display: flex;             /* Applies Flexbox */
+  flex-direction: column;    /* Keeps the column layout */
+  justify-content: center;   /* Centers content vertically */
+  align-items: center;       /* Centers content horizontally */
+        }
+
 .hero-content {
+    /* padding-left: 4rem;
+    width: 80%; */
     position: relative;
     z-index: 2;
-    padding-left: 4rem;
-    width: 80%;
+    padding: var(--content-padding);
+
 }
 
 .content {
@@ -136,22 +168,13 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 3.5rem;
- color: var(--black);
- font-weight: normal;
- margin-bottom: 1.5rem;
- width:100%;
-        }
+  color: var(--black);
+  font-weight: normal;
+  width:100%;
+  padding-top: var(--hero-top-padding);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  }
 
-.hero-title-blue-beige {
-  background-color: var(--blue);
-  font-family: "New Amsterdam", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3.5rem;
- color: var(--beige);
- font-weight: normal;
- width:100%;
-        }
 
  .hero-title-pink-black {
   background-color: var(--pink);
@@ -170,6 +193,7 @@ p {
   font-style: normal;
   color: #243447;
   font-size: 1.25rem;
+  margin-bottom: var(--content-padding);
   }
 
 
@@ -187,15 +211,20 @@ p {
  display: flex;
  align-items: center;
  justify-content: center; */
-     position: relative;
-    width: 100%;
-    padding-top: 2rem;
-    background-color: #c51f5d;
-    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+    
+ position: relative;
+ top: 0;
+ width: 100vw;
+ height: 100%;
+ padding-top: calc(var(--spacing-unit) * 2);
+  background-color: #c51f5d;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+
 }
 
 .hero-image {
@@ -215,11 +244,10 @@ p {
 }
 
 .pirate-heading {
-    width: 80%;                /* Restricts the width of the text block to 80% */
+  width: 80%;                /* Restricts the width of the text block to 80% */
   margin: 0 auto;            /* Centers the text block horizontally */
   text-align: center;
 }
-
 
 
 .custom-bullet-list {
@@ -245,6 +273,7 @@ p {
   margin-left: 10%
   display: inline-block;
   padding: 10px 20px;
+  padding-top: var(--content-padding);
   background-color: var(--pink);
   color: white;
   border: none;
@@ -267,6 +296,7 @@ p {
   margin-left: 10%
   display: inline-block;
   padding: 10px 20px;
+  padding-top: var(--content-padding);
   background-color: var(--blue);
   color: white;
   border: none;
@@ -311,22 +341,27 @@ p {
 /* ------------------------ RESPONSIVE STYLES -----------------------------*/
 
 @media screen and (min-width: 768px) {
+   :root {
+        --section-padding: calc(var(--spacing-unit) * 3);
+        --content-padding: calc(var(--spacing-unit) * 1.5);
+        --hero-top-padding: calc(var(--spacing-unit) * 5);
+    }
+
   .logo {
     max-width: 200px;
     max-height: 50px;
   }
-}
-@media screen and (min-width: 768px) {
+
     .hero-section {
         display: flex;
         flex-wrap: wrap;
-        align-items: stretch;
+        align-items: center; /*used to be stretch */
         min-height: 80vh;
     }
 
     .hero-content {
         width: 60%;
-        padding-right: 2rem;
+        padding-right: calc(var(--content-padding) * 2);
     }
 
     .hero-trapezoid {
@@ -353,13 +388,21 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+    :root {
+        --section-padding: calc(var(--spacing-unit) * 4);
+        --content-padding: calc(var(--spacing-unit) * 2);
+        --hero-top-padding: calc(var(--spacing-unit) * 3);
+    }
+
     .hero-content {
         width: 50%;
     }
 
     .hero-trapezoid {
-        width: 60%;
-        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+        /*width: 60%;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%); */
+         clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 20% 100%);
+
     }
 
         .hero-image {
@@ -370,13 +413,15 @@ p {
 
 @media screen and (min-width: 1440px) {
     .hero-section {
-        max-width: 1400px;
+
         margin: 0 auto;
     }
 
     .hero-trapezoid {
-        width: 65%;
-        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+        /*width: 65%;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); */
+        clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 15% 100%);
+
     }
 
         .hero-image {
