@@ -108,6 +108,18 @@ p {
   padding-bottom:5rem;
 }
 
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 4rem;
+    width: 80%;
+}
+
 .content {
   padding-left: 2rem;
   position: relative;
@@ -118,24 +130,7 @@ p {
   flex-direction: column;
   justify-content: center;
         }
-.pirate-heading {
-    width: 80%;                /* Restricts the width of the text block to 80% */
-  margin: 0 auto;            /* Centers the text block horizontally */
-  text-align: center;
-}
 
-
-.workshop-heading .highlight-pink {
-    background-color: var(--pink); /* Pink background color */
-    padding: 0 5px; /* Add some padding to create space around the text */
-    display: inline-block;
-}
-
-.workshop-heading .highlight-blue {
-    background-color: var(--blue); /* Pink background color */
-    padding: 0 5px; /* Add some padding to create space around the text */
-    display: inline-block;
-}
 .hero-title {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -179,7 +174,7 @@ p {
 
 
 .hero-trapezoid {
- z-index: 0;
+ /*z-index: 0;
  padding-top: 2rem;
  position: relative;
  right: 0;
@@ -191,7 +186,16 @@ p {
  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
  display: flex;
  align-items: center;
- justify-content: center;
+ justify-content: center; */
+     position: relative;
+    width: 100%;
+    padding-top: 2rem;
+    background-color: #c51f5d;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .hero-image {
@@ -210,12 +214,13 @@ p {
   object-fit: contain;
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    max-width: 200px;
-    max-height: 50px;
-  }
+.pirate-heading {
+    width: 80%;                /* Restricts the width of the text block to 80% */
+  margin: 0 auto;            /* Centers the text block horizontally */
+  text-align: center;
 }
+
+
 
 .custom-bullet-list {
     list-style-type: disc; /* Changes the bullet to a circle */
@@ -288,4 +293,94 @@ p {
 
 .workshop-title {
   width: 90%;
+}
+
+.workshop-heading .highlight-pink {
+    background-color: var(--pink); /* Pink background color */
+    padding: 0 5px; /* Add some padding to create space around the text */
+    display: inline-block;
+}
+
+.workshop-heading .highlight-blue {
+    background-color: var(--blue); /* Pink background color */
+    padding: 0 5px; /* Add some padding to create space around the text */
+    display: inline-block;
+}
+
+
+/* ------------------------ RESPONSIVE STYLES -----------------------------*/
+
+@media screen and (min-width: 768px) {
+  .logo {
+    max-width: 200px;
+    max-height: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+    .hero-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        width: 60%;
+        padding-right: 2rem;
+    }
+
+    .hero-trapezoid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding-top: 0;
+        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hero-image {
+        max-width: 60%;
+        max-height: 60%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .hero-section > .content:last-child {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-content {
+        width: 50%;
+    }
+
+    .hero-trapezoid {
+        width: 60%;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+        .hero-image {
+        max-width: 50%;
+        max-height: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-section {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .hero-trapezoid {
+        width: 65%;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+        .hero-image {
+        max-width: 45%;
+        max-height: 45%;
+    }
 }
