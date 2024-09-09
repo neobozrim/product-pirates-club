@@ -339,6 +339,36 @@ p {
     display: inline-block;
 }
 
+
+/*------ TYPEFORM -----------------*/
+* Add this to your existing CSS file */
+
+.typeform-section {
+    background-color: var(--beige);
+    padding: 3rem 0;
+}
+
+.typeform-section .w-section-container {
+    max-width: 800px;  /* Adjust as needed */
+}
+
+.section-heading {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Typeform responsive container */
+[data-tf-live] {
+    height: 500px;  /* Adjust height as needed */
+    width: 100%;
+}
+
+
 /*------ WORKSHOP SECTIONS -------- */
 
 .w-section-container {
