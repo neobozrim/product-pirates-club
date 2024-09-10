@@ -143,6 +143,7 @@ p {
   flex-direction: column;    /* Keeps the column layout */
   justify-content: center;   /* Centers content vertically */
   align-items: center;       /* Centers content horizontally */
+  overflow: hidden; /* Ensure no horizontal scrollbar appears */
         }
 
 .hero-content {
@@ -272,7 +273,6 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
-  margin-left: 10%
   display: inline-block;
   padding: 10px 20px;
   padding-top: var(--content-padding);
@@ -313,8 +313,15 @@ p {
   background-color: #24343b; /* Darker shade of pink for hover state */
 }
 
-.waves {
+.waves-container {
+ width: 100%;
+  display: block;
+}
+
+ .waves {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .workshop-image {
@@ -341,31 +348,30 @@ p {
 
 
 /*------ TYPEFORM -----------------*/
-* Add this to your existing CSS file */
-
-.typeform-section {
-    background-color: var(--beige);
-    padding: 3rem 0;
-}
-
-.typeform-section .w-section-container {
-    max-width: 800px;  /* Adjust as needed */
-}
-
-.section-heading {
-    font-family: "New Amsterdam", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5rem;
-    color: var(--blue);
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* Typeform responsive container */
-[data-tf-live] {
-    height: 500px;  /* Adjust height as needed */
+.typeform-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 9999;
+}
+
+.typeform-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-typeform {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 
@@ -389,6 +395,8 @@ p {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .w-section:hover {
@@ -398,8 +406,10 @@ p {
 
 .w-section .content {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
-
 .w-section .workshop-image {
   width: 100%;
   height: 200px;
@@ -419,6 +429,12 @@ p {
   margin-bottom: 16px;
 }
 
+.w-section .workshop-description {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  color: var(--beige);
+}
+
 .w-section .cta-button {
   background-color: var(--pink);
   color: var(--beige);
@@ -428,12 +444,15 @@ p {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center; /* Changed from flex-start to center */
+  margin-top: auto;
 }
 
 .w-section .cta-button:hover {
   background-color: #a51a4d; /* Darker shade of pink */
   transform: scale(1.05);
 }
+
 
 .w-section .workshop-image-container {
   padding-top: var(--section-padding);
@@ -445,14 +464,6 @@ p {
   align-items: center;
 }
 
-.w-section .workshop-description {
-  flex-grow: 1;
-  margin-bottom: 16px;
-}
-
-.w-section .cta-button {
-  margin-top: auto;
-}
 /* ------------------------ RESPONSIVE STYLES -----------------------------*/
 
 @media screen and (min-width: 768px) {
@@ -503,6 +514,7 @@ p {
     .w-section {
       width: calc(50% - 1rem);
   }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -551,4 +563,6 @@ p {
         max-width: 45%;
         max-height: 45%;
     }
+
+
 }

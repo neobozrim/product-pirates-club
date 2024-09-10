@@ -33,3 +33,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// TYPEFORM
+document.addEventListener('DOMContentLoaded', function() {
+    const typeformUrl = 'https://yavor3.typeform.com/to/TEEVd9YM';
+    const buttons = document.querySelectorAll('.open-typeform');
+    let typeformOverlay;
+
+    function createTypeformOverlay() {
+        typeformOverlay = document.createElement('div');
+        typeformOverlay.className = 'typeform-overlay';
+        typeformOverlay.innerHTML = `
+            <iframe src="${typeformUrl}" class="typeform-iframe"></iframe>
+            <span class="close-typeform">&times;</span>
+        `;
+        document.body.appendChild(typeformOverlay);
+
+        const closeButton = typeformOverlay.querySelector('.close-typeform');
+        closeButton.addEventListener('click', closeTypeform);
+    }
+
+    function openTypeform() {
+        if (!typeformOverlay) {
+            createTypeformOverlay();
+        }
+        typeformOverlay.style.display = 'block';
+    }
+
+    function closeTypeform() {
+        typeformOverlay.style.display = 'none';
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', openTypeform);
+    });
+});
