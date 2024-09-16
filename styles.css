@@ -270,43 +270,30 @@ p {
 
 .cta-button {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 1.25rem;
   display: inline-block;
-  padding: 10px 20px;
-  padding-top: var(--content-padding);
+  padding: 14px 24px;
   background-color: var(--pink);
-  color: white;
+  color: var(--beige);
   border: none;
-  border-radius: 21px;
+  border-radius: 8px;
   cursor: pointer;
   width: fit-content;
   white-space: nowrap;
-  color: var(--beige);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center;
+  margin-top: auto;
 }
 
 .cta-button:hover {
-  background-color: #a51a4d; /* Darker shade of pink for hover state */
+  background-color: #a51a4d; /* Darker shade of pink */
+  transform: scale(1.05);
 }
 
 .cta-button-blue {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.25rem;
-  margin-left: 10%
-  display: inline-block;
-  padding: 10px 20px;
-  padding-top: var(--content-padding);
   background-color: var(--blue);
-  color: white;
-  border: none;
-  border-radius: 21px;
-  cursor: pointer;
-  width: fit-content;
-  white-space: nowrap;
-  color: var(--beige);
 }
 
 .cta-button-blue:hover {
@@ -436,15 +423,6 @@ p {
 }
 
 .w-section .cta-button {
-  background-color: var(--pink);
-  color: var(--beige);
-  font-weight: 600;
-  padding: 14px 24px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center; /* Changed from flex-start to center */
   margin-top: auto;
 }
 
@@ -477,6 +455,18 @@ p {
     max-width: 200px;
     max-height: 50px;
   }
+
+  .logo-ship {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+  .logo-ship-img {
+    width: 100%;
+    height: auto;
+}
 
     .hero-section {
         display: flex;
@@ -524,6 +514,9 @@ p {
         --hero-top-padding: calc(var(--spacing-unit) * 3);
     }
 
+    .logo-ship {
+        max-width: 300px;
+    }
     .hero-content {
         width: 50%;
     }
@@ -547,6 +540,10 @@ p {
 }
 
 @media screen and (min-width: 1440px) {
+        .logo-ship {
+        max-width: 400px;
+    }
+
     .hero-section {
 
         margin: 0 auto;
