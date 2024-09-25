@@ -110,35 +110,37 @@ p {
         }
 
 .hero-content {
-    /* padding-left: 4rem;
-    width: 80%; */
     position: relative;
     z-index: 2;
     padding: var(--content-padding);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 5%; /* Add breathing room on the left */
 
 }
 
 .content {
-  padding-left: 2rem;
+  /*-- padding-left: 2rem; --*/
   position: relative;
   z-index: 2;
   height: 100%;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
         }
 
 .hero-title {
-  font-family: "New Amsterdam", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3.5rem;
-  color: var(--black);
-  font-weight: normal;
-  width:100%;
-  padding-top: var(--hero-top-padding);
-  margin-bottom: calc(var(--spacing-unit) * 1.5);
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem; /* Adjusted for better readability */
+    color: var(--black);
+    margin-bottom: 1rem;
+    text-align: left;
+    line-height: 1.2; /* Improve readability for longer titles */
   }
 
 
@@ -154,12 +156,15 @@ p {
         }
 
 .hero-description {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #243447;
-  font-size: 1.25rem;
-  margin-bottom: var(--content-padding);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    max-width: 90%; /* Prevent overly long lines */
+    line-height: 1.5; /* Improve readability */
   }
 
 
@@ -192,7 +197,7 @@ p {
   object-fit: contain;
 }
 
-.pirate-heading {
+.heading {
   width: 80%;                /* Restricts the width of the text block to 80% */
   margin: 0 auto;            /* Centers the text block horizontally */
   text-align: center;
@@ -214,22 +219,18 @@ p {
 }
 
 .cta-button {
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.25rem;
-  display: inline-block;
-  padding: 14px 24px;
-  background-color: var(--pink);
-  color: var(--beige);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: fit-content;
-  white-space: nowrap;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center;
-  margin-top: auto;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    background-color: var(--pink);
+    color: var(--beige);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Align button to the left */
 }
 
 .cta-button:hover {
@@ -246,7 +247,7 @@ p {
 }
 
 .waves-container {
- width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -266,13 +267,13 @@ p {
   width: 90%;
 }
 
-.workshop-heading .highlight-pink {
+.heading .highlight-pink {
     background-color: var(--pink); /* Pink background color */
     padding: 0 5px; /* Add some padding to create space around the text */
     display: inline-block;
 }
 
-.workshop-heading .highlight-blue {
+.heading .highlight-blue {
     background-color: var(--blue); /* Pink background color */
     padding: 0 5px; /* Add some padding to create space around the text */
     display: inline-block;
@@ -319,7 +320,7 @@ p {
 }
 
 .w-section {
-    background-color: var(--blue);
+  background-color: var(--blue);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -343,6 +344,8 @@ p {
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text */
 }
+
+
 
 .w-section .workshop-image-container {
   padding-top: var(--section-padding);
@@ -424,8 +427,9 @@ p {
     }
 
     .hero-content {
-        width: 60%;
-        padding-right: calc(var(--content-padding) * 2);
+        width: 50%;
+        padding-right: calc(var(--content-padding) * 2); */
+        padding-left: 5%; /* Increase left padding on larger screens */
     }
 
     .hero-trapezoid {
@@ -435,7 +439,7 @@ p {
         width: 50%;
         height: 100%;
         padding-top: 0;
-        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     .hero-image {
@@ -444,6 +448,14 @@ p {
         width: auto;
         height: auto;
         object-fit: contain;
+    }
+
+    .hero-title {
+        font-size: 3rem; /* Larger font size on bigger screens */
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
     }
 
     .hero-section > .content:last-child {
@@ -467,11 +479,16 @@ p {
         max-width: 300px;
     }
     .hero-content {
-        width: 50%;
+       width: 50%; */
+       padding-left: 15%; /* Further increase left padding on desktop */
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
     }
 
     .hero-trapezoid {
-         clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 20% 100%);
+         clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
   .hero-image {
@@ -501,9 +518,8 @@ p {
     }
 
     .hero-trapezoid {
-        /*width: 65%;
-        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); */
-        clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 15% 100%);
+        width: 50%;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 
     }
 
