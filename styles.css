@@ -308,25 +308,25 @@ p {
 
 /*------ WORKSHOP SECTIONS -------- */
 
-  .w-section-container {
-  display: grid;
-  grid-template-columns: 1fr; /* Default to one column */
-  grid-gap: 2rem;
+.w-section-container {
+    display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
 }
 
 .w-section {
-  background-color: var(--blue);
+    background-color: var(--blue);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  min-width: 320px; /* Prevent cards from becoming too narrow */
+  width: 100%; /* Full width on mobile */
 }
 
 .w-section:hover {
@@ -339,13 +339,14 @@ p {
   padding: 16px;
   display: flex;
   flex-direction: column;
-
+  flex: 1;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
 }
 
 .w-section .workshop-image-container {
   padding-top: var(--section-padding);
   width: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,7 +355,9 @@ p {
 .w-section .workshop-image {
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 200px; /* Slightly reduced from 250px */
+  max-height: 150px; /* Add this to limit image height */
+  object-fit: contain; /* Ensure image maintains aspect ratio */
 }
 
 .w-section .workshop-heading {
@@ -367,12 +370,12 @@ p {
   font-size:1rem;
   color: var(--beige);
   opacity: 0.8;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .w-section .workshop-description {
   flex-grow: 1;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--beige);
 }
 
@@ -447,13 +450,9 @@ p {
         width: 100%;
     }
     .w-section {
-      width: calc(50% - 1rem);
+      width: calc(50% - 1.25rem); /* 2 columns, accounting for gap */
   }
 
-   .w-section-container {
-    grid-template-columns: repeat(2, minmax(320px, 1fr));
-    /* Two columns with minimum width of 320px */
-  }
 
 }
 
@@ -472,10 +471,7 @@ p {
     }
 
     .hero-trapezoid {
-        /*width: 60%;
-        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%); */
          clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 20% 100%);
-
     }
 
   .hero-image {
@@ -484,13 +480,14 @@ p {
     }
 
   .w-section {
-    width: calc(33.333% - 1rem);
+    width: calc(33.333% - 1.67rem); /* 3 columns, accounting for gap */
   }
 
-   .w-section-container {
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-    /* Three columns with minimum width of 320px */
+  /* Ensure only two rows are displayed on desktop */
+  .w-section:nth-child(n+7) {
+    display: none;
   }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -515,10 +512,14 @@ p {
         max-height: 45%;
     }
 
-      .w-section-container {
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-    /* Maintain three columns */
+   .w-section {
+    width: calc(33.333% - 1.67rem); /* 3 columns, accounting for gap */
   }
 
+  /* Ensure only two rows are displayed on desktop */
+  .w-section:nth-child(n+7) {
+    display: none;
+  }
 
 }
+
