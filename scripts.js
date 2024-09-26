@@ -36,35 +36,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // TYPEFORM
 document.addEventListener('DOMContentLoaded', function() {
-    const typeformUrl = 'https://yavor3.typeform.com/to/TEEVd9YM';
-    const buttons = document.querySelectorAll('.open-typeform');
-    let typeformOverlay;
-
-    function createTypeformOverlay() {
-        typeformOverlay = document.createElement('div');
-        typeformOverlay.className = 'typeform-overlay';
-        typeformOverlay.innerHTML = `
-            <iframe src="${typeformUrl}" class="typeform-iframe"></iframe>
-            <span class="close-typeform">&times;</span>
-        `;
-        document.body.appendChild(typeformOverlay);
-
-        const closeButton = typeformOverlay.querySelector('.close-typeform');
-        closeButton.addEventListener('click', closeTypeform);
-    }
+    var overlay = document.querySelector('.typeform-overlay');
+    var openButtons = document.querySelectorAll('.open-typeform');
+    var closeButton = document.querySelector('.close-typeform');
 
     function openTypeform() {
-        if (!typeformOverlay) {
-            createTypeformOverlay();
-        }
-        typeformOverlay.style.display = 'block';
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
 
     function closeTypeform() {
-        typeformOverlay.style.display = 'none';
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
     }
 
-    buttons.forEach(button => {
+    openButtons.forEach(function(button) {
         button.addEventListener('click', openTypeform);
     });
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeTypeform);
+    }
+
+    // Remove any automatic opening functionality
+    // The Typeform will now only open when a button is clicked
 });
