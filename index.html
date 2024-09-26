@@ -25,17 +25,21 @@
     <section class="hero-section">
         <div class="hero-content">
             
-            <h1 class="hero-title padding-top-seven">
+            <h1 class="title hero-title hero-content-align">
                 Accelerate Your AI Journey: <br>Prototyping & Collaboration for Product Managers in Sofia
             </h1>
-            <p class="hero-description">
+            <p class="hero-description hero-content-align" >
                 Collaborate with like-minded product managers in Sofia to solve real-world challenges hands-on - using AI tools, ML algorithms and automation workflows.
             </p> 
         </div>
         <div class="hero-trapezoid">
-            <img src="assets/hands-dirty-comic.png" alt="Get your hands dirty. Well... your hook, I guess." class="hero-image">
+            <picture class="hero-image">
+            <source srcset="assets/hands-dirty-comic-desktop.png" media="(min-width: 1024px)">
+            <source srcset="assets/hands-dirty-comic-tablet.png" media="(min-width: 768px)">
+            <img src="assets/hands-dirty-comic-mobile.png" alt="Comic: Get your hands dirty. Well... your hook, I guess.">
+        </picture>
         </div>
-        <div class="content">
+        <div class="hero-button-container">
             <button class="cta-button" id="scroll-button">
                 Aye, tell me more!
             </button>
@@ -43,12 +47,10 @@
     </section>
 
      <!-- New Section WAVES-->
-    <section class="section padding-bottom-two">
-        <div class="content">
-            <h1 class="heading" id="target-section">
+    <section class="section">
+            <h1 class="title" id="target-section">
                 5 Reasons to become a product pirate:
             </h1>
-        </div>
         
         <picture class="waves-container">
             <source srcset="assets/waves-desktop.png" media="(min-width: 1024px)">
@@ -146,41 +148,13 @@
 
 
 <!-- New Section JOIN TODAY-->
-    <section class="section hero-title txt-beige bg-blue">
-        <div class="content padding-top-three padding-bottom-five">
-            <h2 class="heading"><span class = "highlight-pink">Join </span> the product pirates club today! It's FREE!<br></h2>
-            <p class="workshop-title">
-            First meeting coming in October!<br><br></p>
-            <div>
-            <button class="cta-button open-typeform">
-                Sign me up, Pirate!
-            </button>
-        </div>
-        </div>
+<section class="section">
+    <h1 class="title"><span class = "highlight-pink">Join </span> the product pirates club today! It's FREE!<br></h1>
+    <p class="">First meeting coming in October!<br><br></p>
+    <button class="cta-button open-typeform">
+    Sign me up, Pirate!
+    </button>
 </section>
-
-<!-- New Section DETAILS
-    <section class="hero-title-pink-black">
-        <div class="content padding-top-three padding-bottom-five">
-            <h2 class="workshop-heading"><span class = "highlight-blue">Details</span> about the workshops.</h2>
-            <div>
-                <ul class = "custom-bullet-list">
-                    <li>Initially, all workshops are happening in-person in Sofia, Bulgaria.</li>
-                    <li>Groups will be of 5 to 10 people.</li>
-                    <li>Bring a laptop - we are serious about being hands-on!</li>
-                    <li>Learning by doing! Theory will be provided only in the context of your practice work. There are so many opportunities to learn the theory, so few to get your hands dirty and gain real hands-on experience. We focus on the latter.</li>
-                    <li>At the end of each workshop you are going to leave with 
-                    actual experience that you can put into practice at work.</li>
-                    <li>At the end of each session, you’ll be provided with a list of recommended
-                    reading in case you want to deepen your theoretical understanding.</li>
-        
-                </ul>
-            </div>
-            <button class="cta-button cta-button-blue open-typeform">
-                I want a message in a bottle!
-            </button>
-        </div>
-</section> -->
 
 <!-- New Section PRODUCT PIRATES-->
     <section class="section padding-top-two padding-bottom-five">
@@ -188,9 +162,9 @@
             <source srcset="assets/pp-logo-ship-desktop.png" media="(min-width: 1024px)">
             <source srcset="assets/pp-logo-ship-tablet.png" media="(min-width: 768px)">
             <img src="assets/pp-logo-ship-mobile.png" alt="Product Pirates Logo on a Pirate Ship" class="logo-ship-img">
-</picture>
+        </picture>
             
-            <h2 class="heading">A community <br> of hands-on product managers <br> on a journey to discover new horizons <br> in their craft.<br></h2>
+        <h2 class="title">A community <br> of hands-on product managers <br> on a journey to discover new horizons <br> in their craft.<br></h2>
 
             <button class="cta-button">
                 I want to be a product pirate!
@@ -215,17 +189,49 @@
 </section>
 
 <!-- New Section FOOTER-->
-    <section class="workshop-section">
-        <div class="content hero-title-blue-beige">
+<section class="workshop-section">
+
+        <footer>
+          <div class="content hero-title-blue-beige">
             <p class="title-description">2024</p>
             <p class="title-description">Product Pirates is owned by Neobozrim EOOD</p>
-        </div>
+         </div>
+        
+        <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+        </footer>
 </section>
-    <script src="scripts.js"></script>
-    <script src="//embed.typeform.com/next/embed.js"></script>
-    <footer>
-    <!-- Your existing footer content -->
-    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
-</footer>
+
+<script src="scripts.js"></script>
+<script src="//embed.typeform.com/next/embed.js"></script>
+
+
+
+
+
+
+
+
+<!-- New Section DETAILS
+    <section class="hero-title-pink-black">
+        <div class="content padding-top-three padding-bottom-five">
+            <h2 class="workshop-heading"><span class = "highlight-blue">Details</span> about the workshops.</h2>
+            <div>
+                <ul class = "custom-bullet-list">
+                    <li>Initially, all workshops are happening in-person in Sofia, Bulgaria.</li>
+                    <li>Groups will be of 5 to 10 people.</li>
+                    <li>Bring a laptop - we are serious about being hands-on!</li>
+                    <li>Learning by doing! Theory will be provided only in the context of your practice work. There are so many opportunities to learn the theory, so few to get your hands dirty and gain real hands-on experience. We focus on the latter.</li>
+                    <li>At the end of each workshop you are going to leave with 
+                    actual experience that you can put into practice at work.</li>
+                    <li>At the end of each session, you’ll be provided with a list of recommended
+                    reading in case you want to deepen your theoretical understanding.</li>
+        
+                </ul>
+            </div>
+            <button class="cta-button cta-button-blue open-typeform">
+                I want a message in a bottle!
+            </button>
+        </div>
+</section> -->
 </body>
 </html>
