@@ -292,8 +292,41 @@ p {
     display: inline-block;
 }
 
+/*------ PRODUCT PIRATES SECTION -------- */
+.product-pirates-section {
+    background-color: var(--pink);
+    padding: 4rem 1rem 3rem;
+    margin-top: 3rem;
+    text-align: center;
+}
 
-/*------ TYPEFORM -----------------*/
+.product-pirates-title {
+    color: var(--beige);
+    margin-bottom: 2rem;
+}
+
+.logo-ship {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto 2rem;
+}
+
+.logo-ship-img {
+    width: 100%;
+    height: auto;
+}
+
+.product-pirates-cta {
+    background-color: var(--blue);
+    color: var(--beige);
+}
+
+.product-pirates-cta:hover {
+    background-color: #1c293a; /* Slightly darker shade of blue */
+}
+
+/*------ IFRAME TYPEFORM -----------------*/
 .typeform-overlay {
     position: fixed;
     top: 0;
@@ -319,6 +352,7 @@ p {
     font-size: 30px;
     cursor: pointer;
 }
+
 
 /*------ WORKSHOP SECTIONS -------- */
 
@@ -405,6 +439,44 @@ p {
 }
 
 
+/*------------------- FOOTER -------------------- */
+.site-footer {
+    background-color: var(--blue);
+    color: var(--beige);
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.footer-column p,
+.footer-column a {
+    margin: 0.5rem 0;
+    font-size: 0.875rem !important; /* 14px if base font size is 16px */
+}
+
+
+.footer-column a {
+    color: var(--beige);
+    text-decoration: none;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.8;
+}
+
 
 /* ------------------------ RESPONSIVE STYLES -----------------------------*/
 
@@ -420,17 +492,6 @@ p {
     max-height: 50px;
   }
 
-  .logo-ship {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-}
-
-  .logo-ship-img {
-    width: 100%;
-    height: auto;
-}
 
     .hero-section {
         display: flex;
@@ -479,6 +540,37 @@ p {
       width: calc(50% - 1.25rem); /* 2 columns, accounting for gap */
   }
 
+    .product-pirates-section {
+        padding: 5rem 2rem 4rem;
+    }
+
+    .logo-ship {
+        max-width: 200px;
+    }
+
+        .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        flex: 1;
+    }
+
+    .footer-column:first-child {
+        text-align: left;
+    }
+
+    .footer-column:last-child {
+        text-align: right;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 1rem !important; /* Reset to default size for larger screens */
+    }
+
 
 }
 
@@ -489,9 +581,7 @@ p {
         --hero-top-padding: calc(var(--spacing-unit) * 3);
     }
 
-    .logo-ship {
-        max-width: 300px;
-    }
+
     .hero-content {
        width: 50%;
        
@@ -525,12 +615,18 @@ p {
     display: none;
   }
 
+  .product-pirates-section {
+        padding: 6rem 3rem 5rem;
+    }
+
+  .logo-ship {
+        max-width: 250px;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
-        .logo-ship {
-        max-width: 400px;
-    }
+  
 
     .hero-section {
 
