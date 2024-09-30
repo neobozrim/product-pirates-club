@@ -492,6 +492,58 @@ p {
     opacity: 0.8;
 }
 
+/* ------------------------ COOKIE BANNER ---------------------------------*/
+/* Cookie Banner Styles */
+/* Cookie Banner Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--beige);
+  padding: 1.5rem; /* Increased padding */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  display: none; /* Hidden by default */
+}
+
+.cookie-banner-content p {
+  flex: 1 1 70%;
+  margin: 0;
+  font-size: 1rem; /* Increased font size */
+}
+
+.cookie-banner-content a {
+  color: inherit;             /* Use the same color as the surrounding text */
+  text-decoration: underline; /* Add an underline to the link */
+  font-weight: inherit;       /* Ensure the font weight matches the surrounding text */
+}
+
+.cookie-btn {
+  padding: 0.75rem 1.25rem; /* Increased button size */
+  font-size: 1rem;
+}
+
+/* Adjustments for mobile screens */
+@media screen and (max-width: 767px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cookie-banner-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 1rem; /* Add margin-top to create space */
+  }
+
+  .cookie-banner-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+
 
 /* ------------------------ RESPONSIVE STYLES -----------------------------*/
 
