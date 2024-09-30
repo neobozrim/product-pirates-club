@@ -375,6 +375,11 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%; /* Full width on mobile */
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
 .w-section:hover {
@@ -390,6 +395,7 @@ p {
   flex: 1;
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text */
+  width: 100%;
 }
 
 
@@ -414,6 +420,7 @@ p {
   font-size: 2rem;
   color: var(--beige);
   margin-bottom: 8px;
+  width: 100%;
 }
 
 .w-section .workshop-title {
@@ -421,12 +428,20 @@ p {
   color: var(--beige);
   opacity: 0.8;
   margin-bottom: 12px;
+    width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 .w-section .workshop-description {
   flex-grow: 1;
   margin-bottom: 12px;
   color: var(--beige);
+  display: flex; /* Add this line */
+  
+    width: 100%;
+  
+  justify-content: center;
 }
 
 .w-section .cta-button {
@@ -538,6 +553,14 @@ p {
     }
     .w-section {
       width: calc(50% - 1.25rem); /* 2 columns, accounting for gap */
+  }
+
+    .w-section .content {
+    padding: 24px;
+  }
+  
+  .w-section .workshop-title {
+    max-width: 90%; /* Adjust as needed */
   }
 
     .product-pirates-section {
