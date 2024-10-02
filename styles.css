@@ -535,10 +535,20 @@ p {
   display: none; /* Hidden by default */
 }
 
+.cookie-banner-buttons {
+  display: flex;
+  gap: 1rem; /* Adjust the gap size as needed */
+  margin-top: 1rem;
+}
+
 .cookie-banner-content p {
   flex: 1 1 70%;
   margin: 0;
-  font-size: 1rem; /* Increased font size */
+  font-size: 0.75rem; /* Increased font size */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
 }
 
 .cookie-banner-content a {
@@ -548,12 +558,46 @@ p {
 }
 
 .cookie-btn {
-  padding: 0.75rem 1.25rem; /* Increased button size */
-  font-size: 1rem;
+  /* Inherit styles from .cta-button */
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center;
+  margin-top: 0; /* Remove any top margin */
 }
 
-/* Adjustments for mobile screens */
+.accept-btn {
+  background-color: var(--pink);
+  color: var(--beige);
+}
+
+.decline-btn {
+  background-color: var(--beige);
+  color: var(--blue);
+}
+
+.cookie-btn:hover {
+  transform: scale(1.05);
+}
+
+.accept-btn:hover {
+  background-color: #a51a4d; /* Slightly darker shade of pink */
+}
+
+.decline-btn:hover {
+  background-color: #d2d2c2; /* Slightly darker shade of beige */
+}
+
+
+/* ------------------------ RESPONSIVE STYLES -----------------------------*/
 @media screen and (max-width: 767px) {
+    
   .cookie-banner-content {
     flex-direction: column;
     align-items: flex-start;
@@ -568,12 +612,7 @@ p {
   .cookie-banner-content p {
     margin-bottom: 1rem;
   }
-}
 
-
-
-/* ------------------------ RESPONSIVE STYLES -----------------------------*/
-@media screen and (max-width: 767px) {
     .cta-button {
         width: 90%;
         margin-top: 2rem;
