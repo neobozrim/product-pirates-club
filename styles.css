@@ -314,6 +314,7 @@ p {
     background-color: var(--pink); /* Pink background color */
     padding: 0 5px; /* Add some padding to create space around the text */
     display: inline-block;
+    color: var(--beige);
 }
 
 .title .highlight-blue {
@@ -480,6 +481,39 @@ p {
   transform: scale(1.05);
 }
 
+/* ---------------------- HANDS-ON SECTION ------------------------------- */
+.hands-on-section {
+    background-color: var(--blue); /* Background color */
+    padding: 1rem; /* Padding around the section */
+    padding-bottom: 2rem;
+    text-align: center; /* Center-align content */
+    color: var(--beige); /* Text color */
+}
+
+.hands-on-title {
+    font-family: "New Amsterdam", sans-serif; /* Same as other headings */
+    font-size: 2.5rem; /* Adjusted font size */
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+.hands-on-list {
+    list-style-type: disc; /* Bulleted list */
+    padding-left: 20px; /* Adds space for the bullets */
+    font-family: "Lato", sans-serif; /* Use Lato font */
+    font-size: 1.25rem; /* Font size */
+    line-height: 1.5; /* Line height for readability */
+    max-width: 800px; /* Limit the width of the list */
+    margin: 0 auto; /* Center the list */
+    text-align: left; /* Align text to the left */
+    column-count: 1; /* Default to 1 column on mobile */
+    column-gap: 40px; /* Add gap between columns */
+}
+
+.hands-on-list li {
+    margin-bottom: 1rem; /* Space between list items */
+     break-inside: avoid; /* Prevent items from breaking between columns */
+}
+
 
 /*------------------- FOOTER -------------------- */
 .site-footer {
@@ -594,7 +628,7 @@ p {
   background-color: #d2d2c2; /* Slightly darker shade of beige */
 }
 
-/* ------------------------ TERMS OF USE ----------------------------------*/
+/* ------------------------ TERMS OF USE & COOKIES PAGE----------------------------------*/
 /* Terms Page Styles */
 
 /* Main content area */
@@ -699,6 +733,10 @@ p {
     max-width: 200px;
     max-height: 50px;
   }
+
+    .hands-on-list {
+        column-count: 2; /* Display two columns */
+    }
 
 
     .hero-section {
