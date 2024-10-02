@@ -154,6 +154,7 @@ p {
 
 .hero-title {
     padding-top: var(--spacing-unit);
+    margin-bottom: 1rem;
   }
 
 
@@ -163,7 +164,7 @@ p {
     font-style: normal;
     color: var(--blue);
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 90%; /* Prevent overly long lines */
     line-height: 1.5; /* Improve readability */
   }
@@ -230,6 +231,19 @@ p {
     font-size: 1.25rem;
 }
 
+/* Hide the desktop button by default */
+.desktop-button {
+    display: none;
+    text-align: center; /* Inherit styles from .hero-content-align */
+    margin-left: 10%;
+}
+
+/* Show the mobile button by default */
+.mobile-button {
+    display: block;
+    width: 90%;
+}
+
 .cta-button {
     font-family: "Lato", sans-serif;
     font-weight: 600;
@@ -243,6 +257,22 @@ p {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     align-self: center; /* Center the button by default */
+    margin-top: 2rem; /* Add some space between the description and the button */
+}
+
+.cta-button-hero-desktop {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    background-color: var(--pink);
+    color: var(--beige);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Center the button by default */
     margin-top: 2rem; /* Add some space between the description and the button */
 }
 
@@ -302,7 +332,6 @@ p {
 
 .product-pirates-title {
     color: var(--beige);
-    margin-bottom: 2rem;
 }
 
 .logo-ship {
@@ -397,8 +426,6 @@ p {
   text-align: center; /* Center text */
   width: 100%;
 }
-
-
 
 .w-section .workshop-image-container {
   padding-top: var(--section-padding);
@@ -546,12 +573,24 @@ p {
 
 
 /* ------------------------ RESPONSIVE STYLES -----------------------------*/
-
+@media screen and (max-width: 767px) {
+    .cta-button {
+        width: 90%;
+        margin-top: 2rem;
+    }
+}
 @media screen and (min-width: 768px) {
    :root {
         --section-padding: calc(var(--spacing-unit) * 3);
         --content-padding: calc(var(--spacing-unit) * 1.5);
         --hero-top-padding: calc(var(--spacing-unit) * 5);
+    }
+
+    .desktop-button {
+        display: block;
+    }
+    .mobile-button {
+        display: none;
     }
 
   .logo {
@@ -662,7 +701,10 @@ p {
        
     }
 
-    .hero-content-align,  {
+    .cta-button-hero-desktop {
+      margin-left: 15%;
+    }
+    .hero-content-align  {
        padding-left: 15%;
     }
 
