@@ -143,7 +143,10 @@ p {
 
   .hero-button-container {
     width: 100%;
-    padding-left: 5%; /* Match the hero-content-align padding */
+    /*padding-left: 5%; /* Match the hero-content-align padding */
+    display: flex;
+    justify-content: center;
+
     
 }
 
@@ -258,6 +261,7 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
     align-self: center; /* Center the button by default */
     margin-top: 2rem; /* Add some space between the description and the button */
+
 }
 
 .cta-button-hero-desktop {
@@ -326,7 +330,9 @@ p {
 /*------ PRODUCT PIRATES SECTION -------- */
 .product-pirates-section {
     background-color: var(--pink);
-    padding: 4rem 1rem 3rem;
+    /*padding: 4rem 1rem 3rem; */
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     margin-top: 3rem;
     text-align: center;
 }
@@ -697,10 +703,12 @@ p {
     margin-bottom: 1rem;
   }
 
-    .cta-button {
-        width: 90%;
-        margin-top: 2rem;
-    }
+   .cta-button {
+    width: 90%; /* Set consistent width */
+    margin: 2rem auto 0 auto; /* Center the button */
+    display: block; /* Ensure it's a block-level element */
+    
+}
 
         .terms-main {
         padding: 1rem;
