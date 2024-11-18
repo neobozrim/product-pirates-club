@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmed - Product Pirates</title>
+    <style>
+        :root {
+            --pink: #c51f5d;
+            --beige: #e2e2d2;
+            --blue: #243447;
+            --black: #141d26;
+        }
+
+        @font-face {
+            font-family: 'NewAmsterdam';
+            src: url('fonts/NewAmsterdam-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            src: url('fonts/Lato-Regular.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--beige);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .confirmation-card {
+            background-color: var(--pink);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+        }
+
+        h1 {
+            font-family: 'NewAmsterdam', sans-serif;
+            color: var(--beige);
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem 0;
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            color: var(--beige);
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .confirmation-card {
+                padding: 3rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-card">
+        <h1>Registration Confirmed!</h1>
+        <p>You are going to receive further details by email. Enjoy the day, pirate!</p>
+    </div>
+</body>
+</html>
